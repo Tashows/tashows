@@ -1,0 +1,24 @@
+html, body {
+    background-color: #F5F5F5;
+    color: #333333;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    background-image: url("http://www.tashows.com/images/Tashows-02.jpg");
+    background-size: cover;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}

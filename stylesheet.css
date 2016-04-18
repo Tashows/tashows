@@ -5,8 +5,68 @@ html, body {
     font-size: 1em;
 }
 
+hr {
+    border-top: 1px solid grey;
+}
+
+.well {
+    background-color: white;
+}
+
+.card {
+    background-color: white;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.body-area {
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    height: 230px;
+}
+
+.body-area > p > a {
+    color: lightGray;
+}
+
+.body-area > p > a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
 .navbar {
     border-radius: 0;
+    border: none;
+    font-weight: lighter;
+}
+
+.navbar-nav {
+    padding-top: 7px;
+    height: 65px;
+}
+
+.navbar-header {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: transparent;
 }
 
 .col-centered {

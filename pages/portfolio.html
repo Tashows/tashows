@@ -1,3 +1,16 @@
-<h1>Portfolio</h1>
+<h2>Portfolio</h2>
+<hr>
 
-<div ng-repeat></div>
+<div class="row">
+    <div ng-controller="portfolioController">
+        <div ng-repeat="item in portfolioItems">
+            <div class="col-md-4">
+                <div class="card">
+                    <portfolio-item title="{{ item.title }}" url="{{ item.url }}"
+                        desc="{{ item.description }}" extra="{{ item.extra }}" 
+                        extra-url="{{ item.extraUrl }}"></portolio-item>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

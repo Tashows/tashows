@@ -46,15 +46,14 @@ iframe {
     font-weight: lighter;
 }
 
-.navbar-nav {
-    padding-top: 7px;
-    height: 65px;
+.navbar-right {
 }
 
-.navbar-header {
+.navbar-inverse .navbar-brand {
     margin-top: 5px;
     font-weight: bold;
     font-size: 1.25em;
+    color: white;
 }
 
 .navbar-inverse .navbar-nav > .active > a {
@@ -81,4 +80,56 @@ iframe {
     height: 200px;
     width: 200px;
     border-radius: 100px;
+}
+
+.btn-i {
+    margin: 0 5px;
+    color: gray;
+    font-size: 3em;
+    padding: 0;
+}
+
+.btn-fb:hover {
+    color: #3b5998;
+}
+
+.btn-li:hover {
+    color: #0077B5;
+}
+
+.btn-gh:hover {
+    color: #4078c0;
+}
+
+.btn-tw:hover {
+    color: #55acee;
+}
+
+
+.fb-fi {
+    display: inline-block;
+    border-radius: 20px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    margin-bottom: 7px;
+}
+
+.fb-fi:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+.review-wrap {
+    padding: 10px;
+}
+
+.review-author {
+    text-align: right;
+}
+
+.fa-quote-left {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    opacity: 0.3;
 }

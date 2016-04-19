@@ -1,0 +1,14 @@
+<div class="review-wrap">
+    <div class="review-body">
+        <i class="fa fa-quote-left fa-2x" aria-hidden="true"></i>
+        <p>{{ body }}</p>
+    </div>
+    <p class="review-author">
+        <span ng-if="authorUrl == ''">
+            {{ author }}
+        </span>
+        <span ng-if="authorUrl != ''">
+            <a href="{{ authorUrl }}">{{ author }}</a>
+        </span>
+    </p>
+</div>

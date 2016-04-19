@@ -65,6 +65,59 @@ app.config(function($routeProvider, $sceDelegateProvider){
 
 app.controller("aboutController", ["$scope", "$location", function($scope, $location) {
   updateHash();
+  
+  $scope.reviews = [
+    {
+      body: "He delivered 110% of what I needed! Clearly understood the project and delivered a perfect end product. I definitely intend to use his services for future projects!",
+      author: "nalarid",
+      authorUrl: "https://www.fiverr.com/nalarid",
+      origin: "Fiverr",
+      originUrl: "https://www.fiverr.com"
+    },
+    {
+      body: "Cant say enough good things. Was delivered a well edited file in a timely fashion. Delivered exactly what was promised and the sound quality was great. Added foley elements which greatly enhanced the final product. Will def use again!",
+      author: "Anghus",
+      authorUrl: "https://www.fiverr.com/anghus",
+      origin: "Fiverr",
+      originUrl: "https://www.fiverr.com"
+    },
+    {
+      body: "Fantastic experience working with Tashows!! Great sound engineer, fast communication, total professional!! Thanks Tasos! LOTS more work coming your way!! Good luck with the move! Best, RR/cineMOOK",
+      author: "Cinemook",
+      authorUrl: "https://www.fiverr.com/cinemook",
+      origin: "Fiverr",
+      originUrl: "https://www.fiverr.com"
+    },
+     {
+      body: "Tasos is the best professional you could possibly hire! EVER!",
+      author: "Mom",
+      authorUrl: "",
+      origin: "Fiverr",
+      originUrl: "https://www.fiverr.com"
+    },
+    {
+      body: "I can not say enough good things about this seller! The files were high quality and I will use his services again! Thanks!",
+      author: "Fotogsarah",
+      authorUrl: "https://www.fiverr.com/fotogsarah",
+      origin: "Fiverr",
+      originUrl: "https://www.fiverr.com"
+    },
+    {
+      body: "Beautifully prepared video. Thank you. My experience was excellent.",
+      author: "Bstavrou",
+      authorUrl: "https://www.fiverr.com/bstavrou",
+      origin: "Fiverr",
+      originUrl: "https://www.fiverr.com"
+    },
+    {
+      body: "TASHOWS is awesome!! Super fast and always high quality. Great to work with ; ) Tonya",
+      author: "Tonyarsimp",
+      authorUrl: "https://www.fiverr.com/tonyarsimp",
+      origin: "Fiverr",
+      originUrl: "https://www.fiverr.com"
+    }
+  ];
+  
 }]);
 
 app.controller("servicesController", ["$scope", "$location", function($scope, $location) {
@@ -114,7 +167,7 @@ app.controller("portfolioController", ["$scope", "$location", function($scope, $
     },
     {
       title: "Pavarini Design Promo Video",
-      description: 'This is a promosional video for Pavarini Design. I did all the audio editing, denoising and mixing.',
+      description: 'This is a promotional video for Pavarini Design. I did all the audio editing, denoising and mixing.',
       url: "https://www.youtube.com/embed/LTsG1PpqPHE",
     },
     {
@@ -148,7 +201,7 @@ app.directive("portfolioItem", function() {
       
       var setIframeSize = function(){
         for (var i=0; i < $('.video-area').length; i++) {
-          var height = Math.round($('.video-area').eq(i).width() / 1.77);
+          var height = Math.floor($('.video-area').eq(i).width() / 1.77);
           $('.video-area').eq(i).css("height", height);
         }
       };
@@ -158,6 +211,21 @@ app.directive("portfolioItem", function() {
         setIframeSize();
       });
       
+      $('.body-area > p > a').attr("target", "_blank");
+      
+    }
+  };
+});
+
+app.directive("review", function(){
+  return {
+    restrict: "E",
+    templateUrl: "directives/review.html",
+    replace: true,
+    scope: {
+      author: "@",
+      body: "@",
+      authorUrl: "@"
     }
   };
 });

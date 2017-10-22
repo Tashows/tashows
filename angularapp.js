@@ -1,21 +1,21 @@
 /*global angular*/
 /*global $*/
-var hash = "";
 var updateHash = function() {
-  hash = window.location.hash;
-  if (hash == "#/") {
-    $('.navbar-right > li').removeClass('active');
-    $('.navbar-right > li > a[href="#/"]').parent().addClass('active');
-  } else if (hash == "#/services") {
-    $('.navbar-right > li').removeClass('active');
-    $('.navbar-right > li > a[href="#/services"]').parent().addClass('active');
-  } else if (hash == "#/portfolio") {
-    $('.navbar-right > li').removeClass('active');
-    $('.navbar-right > li > a[href="#/portfolio"]').parent().addClass('active');
-  } else if (hash == "#/contact") {
-    $('.navbar-right > li').removeClass('active');
-    $('.navbar-right > li > a[href="#/contact"]').parent().addClass('active');
-  }
+  $('.navbar-right > li').removeClass('active');
+  $('.navbar-right > li > a[href="' + window.location.hash + '"]').parent().addClass('active');
+  // if (hash == "#/") {
+  //   $('.navbar-right > li').removeClass('active');
+  //   $('.navbar-right > li > a[href="#/"]').parent().addClass('active');
+  // } else if (hash == "#/services") {
+  //   $('.navbar-right > li').removeClass('active');
+  //   $('.navbar-right > li > a[href="#/services"]').parent().addClass('active');
+  // } else if (hash == "#/portfolio") {
+  //   $('.navbar-right > li').removeClass('active');
+  //   $('.navbar-right > li > a[href="#/portfolio"]').parent().addClass('active');
+  // } else if (hash == "#/contact") {
+  //   $('.navbar-right > li').removeClass('active');
+  //   $('.navbar-right > li > a[href="#/contact"]').parent().addClass('active');
+  // }
 };
 
 var app = angular.module("app", ["ngRoute"]);

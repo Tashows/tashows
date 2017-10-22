@@ -4,16 +4,34 @@
 <div class="row">
   <div class="col-md-7 col-centered">
     <div class="profile-pic"></div>
-    <h3 class="text-center">Tasos Maschalidis (a.k.a. Tashows) is a multitalented, multi-awesome individual, who focuses on Web and Media creations.</h3>
+    <h3 class="text-center">Hey there, surfer of the web, curious adventurer of the far beyond! May your stay in this page be short, yet meaningful. <small>Too epic? Let's tone that down a bit...</small></h3>
     <div id="bio" class="well">
       <p>
-        His skillset includes Web Design & Development, Video & Audio Production, Music Composition, Graphic Design, 2D Animation and more.
-        He plays the drums, solves the Rubik's cube in 30 seconds and loves <a href="https://www.youtube.com/user/Vsauce">VSause</a>.
-        He enjoys learning new stuff and facing new challenges every day! Self-taught web developer, a veteran in editing and producing media (some people say he is an audio-commando)
-        and a gamer who loves everything from Tetris to Dota2. If he had to choose one word to describe himself, that would be "geek".
+        My name is Tasos Maschalidis. I've recently switched from being the Audio
+        Guy to being the Developer. Yeah, I tend to switch from one rockstar 
+        career to the next one. And I am awesome every time. Just wait till being an astronaut has a Udemy course!
+        My biggest achievement so far is <a href="https://www.photocontest.gr">photocontest.gr</a>, a greek photography 
+        community web app, that hosts contests and connects photographers. It 
+        features many cool... features, but I won't spoil the mystery. Random stuff 
+        about me: I love <a href="https://www.youtube.com/user/Vsauce">VSause</a> 
+        and <a href="https://www.youtube.com/user/Kurzgesagt">Kurzgesagt</a>.
+        I enjoy learning new stuff and facing new challenges every day! 
+        Self-taught web developer, veteran in manipulating anything digital
+        and a gamer who loves everything from Tetris to Dota2. In one word: geek.
         Who doesn't want to hire a geek? <span style="font-size:0.75em"><em>(Hint: Not you!)</em></span>
       </p>
     </div>
+    <!--Oh shoot! You found me... Truth be told, I was once too lazy and too sentimental to just delete this old text, so I decided to comment it out and keep it as reminder of... -->
+    <!--<h3 class="text-center">Tasos Maschalidis (a.k.a. Tashows) is a multitalented, multi-awesome individual, who focuses on Web and Media creations.</h3>-->
+    <!--<div id="bio" class="well">-->
+    <!--  <p>-->
+    <!--    His skillset includes Web Design & Development, Video & Audio Production, Music Composition, Graphic Design, 2D Animation and more.-->
+    <!--    He plays the drums, solves the Rubik's cube in 30 seconds and loves <a href="https://www.youtube.com/user/Vsauce">VSause</a>.-->
+    <!--    He enjoys learning new stuff and facing new challenges every day! Self-taught web developer, a veteran in editing and producing media (some people say he is an audio-commando)-->
+    <!--    and a gamer who loves everything from Tetris to Dota2. If he had to choose one word to describe himself, that would be "geek".-->
+    <!--    Who doesn't want to hire a geek? <span style="font-size:0.75em"><em>(Hint: Not you!)</em></span>-->
+    <!--  </p>-->
+    <!--</div>-->
   </div>
 </div>
 
@@ -22,13 +40,12 @@
 <hr>
 <div ng-controller="aboutController">
   <div class="row">
-    <div ng-repeat="review in reviews">
-      <div class="col-md-6 col-centered">
+    <div ng-repeat="review in reviews" class="review-external-wrap">
+      <div class="col-md-6">
         <div class="card">
           <review body="{{ review.body }}" author="{{ review.author }}" author-url="{{ review.authorUrl }}"></review>
         </div>
       </div>
     </div>
-    
   </div>
 </div>
